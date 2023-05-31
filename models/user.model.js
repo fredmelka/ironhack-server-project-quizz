@@ -28,10 +28,9 @@ const userSchema = new Schema({
             match: EMAIL_REGEX},
     _status: {
             type: String,
-            enum: ['user', 'power', 'admin'],
-            default: 'user'},
-    _friendlist: {
-            type: Array}
+            enum: ['User', 'Power', 'Admin'],
+            default: 'User'},
+    _friendlist: [String]               // Needs here some clarification and specification
     },
     {timestamps: true}
 );
