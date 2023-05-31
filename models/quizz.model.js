@@ -1,7 +1,7 @@
 
-import { Schema, model, set } from "mongoose";
+import { Schema, model } from 'mongoose';
 import User from './user.model.js'; 
-import Question from "./question.model.js";
+import Question from './question.model.js';
 
 const NON_EMPTY_STRING_REGEX = /^(?!\s*$).+/;
 const capitalize = (string) => string[0].toUpperCase() + string.substring(1);
