@@ -9,7 +9,6 @@ import errorManager from './errors/index.js';       // Importing error managemen
 
 const app = express();
 configuration(app);
-errorManager(app);
 
 // Setting default value for local title
 const projectName = 'Skweez me!';
@@ -19,5 +18,7 @@ app.locals.title = `${capitalize(projectName)} - powered by Fred MELKA`;
 
 // Initiating Server Routing
 app.use('/', index);
+
+errorManager(app);
 
 export default app;
