@@ -17,7 +17,7 @@ const userSchema = new Schema({
             maxLength: 20},
     _password: {
             type: String,
-            required: [true, 'Password must have ten characters minimum.'],
+            required: true,
             select: false},
     _email: {
             type: String,

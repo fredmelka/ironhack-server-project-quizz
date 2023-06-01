@@ -1,0 +1,48 @@
+{
+    "user": {
+        "_username": "brunoMelka",
+        "_password": "1234",
+        "_email": "test@quizz.com",
+        "_status": "User",
+        "_friendlist": []
+    },
+    "question_1": {
+        "_tags": ["Maths", "Elementary", "Fun"],
+        "_level": "Easy",
+        "_label": "3 x 8 = ?",
+        "_answers": [{"_text": "16", "_value": 0}, {"_text": "21", "_value": 0}, {"_text": "24", "_value": 1}, {"_text": "30", "_value": 0}],
+        "_picture": "",
+        "_owner": "647860db603303409dec2ea8"
+    },
+    "question_2": {
+        "_tags": ["Maths", "Elementary", "Fun"],
+        "_level": "Intermediate",
+        "_label": "2 ^ 6 = ?",
+        "_answers": [{"_text": "16", "_value": 0}, {"_text": "64", "_value": 1}, {"_text": "1024", "_value": 0}, {"_text": "12", "_value": 0}],
+        "_picture": "",
+        "_owner": "647860db603303409dec2ea8"   
+    },
+    "question_3": {
+        "_tags": ["Maths", "Elementary", "Fun"],
+        "_level": "Intermediate",
+        "_label": "cos(90deg) = ?",
+        "_answers": [{"_text": "45", "_value": 0}, {"_text": "1", "_value": 0}, {"_text": "270", "_value": 0}, {"_text": "0", "_value": 1}],
+        "_picture": "",
+        "_owner": "647860db603303409dec2ea8"   
+    },
+    "quizz": {
+        "_title": "simple test Challenge",
+        "_tags": ["Algebra", "Seventh grade"],
+        "_difficulty": "Advanced",
+        "_timer": 15,
+        "_questions": ["6478644656906c4a06ea49bb", "6478644656906c4a06ea49c0", "6478644656906c4a06ea49c5"],
+        "_output": [],
+        "_icon": "",
+        "_popularity": 3,
+        "_owner": "647860db603303409dec2ea8"
+    },
+    "test": {
+        "_player": "647860db603303409dec2ea8",
+        "_quizz": "6478699b81a2787df3692f33"
+    }
+}
