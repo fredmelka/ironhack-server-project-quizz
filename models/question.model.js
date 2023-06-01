@@ -4,7 +4,7 @@ import User from './user.model.js';
 
 const NON_EMPTY_STRING_REGEX = /^(?!\s*$).+/;
 const PICTURE_URL_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/;
-const capitalize = (string) => string[0].toUpperCase() + string.substring(1);
+const capitalize = (string) => {if (typeof string != 'string') {string =''}; return string[0].toUpperCase() + string.substring(1)};
 
 // Creating Schema for the Subdocument 'answer' 
 const answerSchema = new Schema({

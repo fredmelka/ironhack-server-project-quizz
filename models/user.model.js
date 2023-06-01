@@ -30,7 +30,7 @@ const userSchema = new Schema({
             type: String,
             enum: ['User', 'Power', 'Admin'],
             default: 'User'},
-    _friendlist: [String]               // Needs here some clarification and specification
+    _friendlist: [String] // Needs here some clarification and specification
     },
     {timestamps: true}
 );

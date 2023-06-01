@@ -4,7 +4,7 @@ import User from './user.model.js';
 import Question from './question.model.js';
 
 const NON_EMPTY_STRING_REGEX = /^(?!\s*$).+/;
-const capitalize = (string) => string[0].toUpperCase() + string.substring(1);
+const capitalize = (string) => {if (typeof string != 'string') {string =''}; return string[0].toUpperCase() + string.substring(1)};
 
 const quizzSchema = new Schema({
     _title: {
