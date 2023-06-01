@@ -1,8 +1,11 @@
 {
+    "name": "quizz-project",
+    "version": "1.0.0",
+    "private": true,
     "scripts": {
         "dev": "nodemon server.js",
         "start": "node server.js",
-        "seed": "node seeder.js"
+        "seed": "node ./seeds/seeder.js"
     },
     "type": "module",
     "dependencies": {
