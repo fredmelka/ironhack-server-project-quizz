@@ -6,16 +6,18 @@ import jwt from 'jsonwebtoken';             // Importing module 'jsonwebtoken' t
 import User from '../models/user.model.js'; // Importing model User to interact with database
 
 const saltRounds = Number(process.env.SALT);
+const tokenSecret = process.env.TOKEN_SECRET;
+
 const router = express.Router();
 
-// Setting the Authentification routes
+// ROUTES | AUTHENTIFICATION
 router.post('/signup', signUp);
+router.post('/login', login);
 
-
-// Functions
+// FUNCTION | SIGN UP
 async function signUp (request, response, next) {
     
-const {_username, _password, _email } = request.body;
+let {_username, _password, _email} = request.body;
 
 // Rejection for empty inputs
 if (_username == '' || _password == '' || _email == '') {
@@ -46,19 +48,48 @@ try {
     if (foundUser) {response.status(400).json({success: false, message: 'Bad Request: User with such email already exists.'}); return;};
 
     // Email is as of now supposedly new and server can proceed to sign up
-    const generatedSalt = await bcrypt.genSalt(saltRounds);
+    let generatedSalt = await bcrypt.genSalt(saltRounds);
     let hashedPassword = await bcrypt.hash(_password, generatedSalt);
 
     // Creation of the new User in the database
     let createdUser = await User.create({_username, _password: hashedPassword, _email});
 
-    // Destructuration of the new User object to omit hashed password
-    
+    // Destructuring of the new User object to hide hashed password
     let {_username: user, _email: email , _status: status, _id: id} = createdUser;
     let newUser = {user, email, status, id};
     
     // Send success response
     response.status(201).json({success: true, user: newUser});
+}
+catch (error) {console.log(error); next(error);};
+};
+
+// FUNCTION | LOG IN
+async function login (request, response, next) {
+
+let { _email, _password } = request.body;
+
+// Rejection for empty inputs
+if (_email == '' || _password == '') {
+    response.status(400).json({success: false, message: 'Bad Request: Please provide non empty inputs.'});
+    return;};
+
+try {
+    let user = await User.findOne({_email: _email}).select('_username _password');
+
+    // Rejection for _email not found
+    if (!user) {response.status(401).json({success: false, message: 'Bad Request: Wrong Credentials.'}); return;};
+
+    // Performs comparison between input password and stored hashed password
+    let isPasswordValid = await bcrypt.compare(_password, user._password);
+
+    // Rejection for invalid password
+    if (!isPasswordValid) {response.status(401).json({success: false, message: 'Bad Request: Wrong Credentials.'}); return;};
+
+    // Performs Token construction to be sent as response
+    let payload = {_username: user._username, _id: user._id};
+    let authToken = jwt.sign(payload, tokenSecret, {algorithm: 'HS256', expiresIn: '1h'}); 
+    response.status(200).json({success: true, message: authToken});
 }
 catch (error) {console.log(error); next(error);};
 };
