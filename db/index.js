@@ -1,7 +1,7 @@
 
-import mongoose from "mongoose";
+import mongoose from "mongoose"; // Importing module 'mongoose' to handle exchanges with the database
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/skweez';
 
 mongoose
     .connect(MONGODB_URI)
