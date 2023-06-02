@@ -1,9 +1,9 @@
 
-import express from 'express';              // Importing module 'express' to set Router methods
-import bcrypt from 'bcryptjs';              // Importing module 'bcryptjs' to deal with password encryption
-import jwt from 'jsonwebtoken';             // Importing module 'jsonwebtoken' to manage token exchanges and authentication
-// import { isAuthenticated } from... 
-import User from '../models/user.model.js'; // Importing model User to interact with database
+import express from 'express';                                      // Importing module 'express' to set Router methods
+import bcrypt from 'bcryptjs';                                      // Importing module 'bcryptjs' to deal with password encryption
+import jwt from 'jsonwebtoken';                                     // Importing module 'jsonwebtoken' to manage token exchanges and authentication
+import isAuthenticated from '../middlewares/isAuthenticated.js';    // Importing middleware 'isAuthenticated to decode token
+import User from '../models/user.model.js';                         // Importing model User to interact with database
 
 const saltRounds = Number(process.env.SALT);
 const tokenSecret = process.env.TOKEN_SECRET;
@@ -13,8 +13,9 @@ const router = express.Router();
 // ROUTES | AUTHENTIFICATION
 router.post('/signup', signUp);
 router.post('/login', login);
+router.get('/verify', isAuthenticated, authentication);
 
-// FUNCTION | SIGN UP
+// FUNCTION | SIGNUP
 async function signUp (request, response, next) {
     
 let {_username, _password, _email} = request.body;
@@ -64,7 +65,7 @@ try {
 catch (error) {console.log(error); next(error);};
 };
 
-// FUNCTION | LOG IN
+// FUNCTION | LOGIN
 async function login (request, response, next) {
 
 let { _email, _password } = request.body;
@@ -77,19 +78,28 @@ if (_email == '' || _password == '') {
 try {
     let user = await User.findOne({_email: _email}).select('_username _password');
 
-    // Rejection for _email not found
-    if (!user) {response.status(401).json({success: false, message: 'Bad Request: Wrong Credentials.'}); return;};
+    // Rejection for user not found
+    if (!user) {response.status(401).json({success: false, message: 'Unauthorized: Wrong Credentials.'}); return;};
 
     // Performs comparison between input password and stored hashed password
     let isPasswordValid = await bcrypt.compare(_password, user._password);
 
     // Rejection for invalid password
-    if (!isPasswordValid) {response.status(401).json({success: false, message: 'Bad Request: Wrong Credentials.'}); return;};
+    if (!isPasswordValid) {response.status(401).json({success: false, message: 'Unauthorized: Wrong Credentials.'}); return;};
 
     // Performs Token construction to be sent as response
     let payload = {_username: user._username, _id: user._id};
     let authToken = jwt.sign(payload, tokenSecret, {algorithm: 'HS256', expiresIn: '1h'}); 
     response.status(200).json({success: true, message: authToken});
+}
+catch (error) {console.log(error); next(error);};
+};
+
+// FUNCTION | VERIFY
+async function authentication (request, response, next) {
+try {
+    console.log(`Payload sent with the request is ${request.payload}`);
+    response.status(200).json({success: true, message: request.payload, user: request.user})
 }
 catch (error) {console.log(error); next(error);};
 };
