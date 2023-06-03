@@ -98,7 +98,7 @@ catch (error) {console.log(error); next(error);};
 // FUNCTION | VERIFY
 async function authentication (request, response, next) {
 try {
-    console.log(`Payload sent with the request is ${request.payload}`);
+    console.log(`Payload _id sent with the request is ${request.payload._id}`);
     response.status(200).json({success: true, message: request.payload, user: request.user})
 }
 catch (error) {console.log(error); next(error);};
