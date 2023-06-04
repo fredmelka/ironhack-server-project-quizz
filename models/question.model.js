@@ -11,7 +11,7 @@ const answerSchema = new Schema({
     _text: {type: String, required: true, trim: true},
     _value: {type: Number, required: true, default: 0}
     },
-    {timestamps: true}
+    {_id: false, timestamps: true}
 );
 
 const questionSchema = new Schema({
@@ -24,6 +24,11 @@ const questionSchema = new Schema({
             type: String,
             required: true,
             enum: ['Easy', 'Intermediate', 'Hard']},
+    _language: {
+            type: String,
+            required: true,
+            default: 'French',
+            enum: ['French', 'English', 'Chinese']},
     _label: {
             type: String,
             required: true,
