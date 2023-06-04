@@ -14,7 +14,7 @@
         "_label": "3 x 8 = ?",
         "_answers": [{"_text": "16", "_value": 0}, {"_text": "21", "_value": 0}, {"_text": "24", "_value": 1}, {"_text": "30", "_value": 0}],
         "_picture": "",
-        "_owner": "647860db603303409dec2ea8"
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags": ["Maths", "Elementary", "Fun"],
@@ -22,7 +22,7 @@
         "_label": "2 ^ 6 = ?",
         "_answers": [{"_text": "16", "_value": 0}, {"_text": "64", "_value": 1}, {"_text": "1024", "_value": 0}, {"_text": "12", "_value": 0}],
         "_picture": "",
-        "_owner": "647860db603303409dec2ea8"   
+        "_owner": "647b6f5ba7feba7de2d55de3"   
     },
         {
         "_tags": ["Maths", "Elementary", "Fun"],
@@ -30,7 +30,7 @@
         "_label": "cos(90deg) = ?",
         "_answers": [{"_text": "45", "_value": 0}, {"_text": "1", "_value": 0}, {"_text": "270", "_value": 0}, {"_text": "0", "_value": 1}],
         "_picture": "",
-        "_owner": "647860db603303409dec2ea8"   
+        "_owner": "647b6f5ba7feba7de2d55de3"   
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -38,7 +38,7 @@
         "_label" : "De quelle statue peut-on admirer à côté des pyramides de Gizeh en Egypte ?",
         "_answers" : [{"_text" : "Ramsès", "_value" : 0}, {"_text" : "Ra", "_value" : 0}, {"_text" : "Ratatouille", "_value" : 0}, {"_text" : "Sphinx", "_value" : 10}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -46,7 +46,7 @@
         "_label" : "Lequel de ces dinosaures n'était pas herbivore ?",
         "_answers" : [{"_text": "le Giganotosaure", "_value": 10}, {"_text": "le Stégosaure", "_value": 0}, {"_text": "le Dreugstaure", "_value": 0}, {"_text": "le Tricératops", "_value": 0}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -54,7 +54,7 @@
         "_label" : "Sous quel règne le château de Windsor a-t-il été érigé ?",
         "_answers": [{"_text": "Henry VIII", "_value": 0}, {"_text": "Guillaume le conquérant", "_value": 10}, {"_text": "La reine Victoria", "_value": 0}, {"_text": "George III", "_value": 0}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -62,7 +62,7 @@
         "_label" : "Quel âge est le plus proche de notre ère ?",
         "_answers": [{"_text": "L'âge de Bronze", "_value": 0}, {"_text": "L'âge de Fer", "_value": 10}, {"_text": "L'âge de Bois", "_value": 0}, {"_text": "L'âge de Pierre", "_value": 0}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -70,7 +70,7 @@
         "_label" : "Dans quel pays est né le compositeur Frédéric Chopin ?",
         "_answers": [{"_text": "Allemagne", "_value": 0}, {"_text": "Hongrie", "_value": 0}, {"_text": "Pologne", "_value": 10}, {"_text": "France", "_value": 0}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -78,7 +78,7 @@
         "_label" : "Qu'est-ce qui orne le blason de la ville de Paris ?",
         "_answers": [{"_text": "Un Bonnet Phrygien", "_value": 0}, {"_text": "Un Coq", "_value": 0}, {"_text": "Un Navire", "_value": 10}, {"_text": "Une Colombe", "_value": 0}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -86,7 +86,7 @@
         "_label" : "Quel nom porte la guerre qui a opposé la France et l'Angleterre entre 1337 et 1453 ?",
         "_answers": [{"_text": "La Guerre des Boutons", "_value": 0}, {"_text": "La Drôle de Guerre", "_value": 0}, {"_text": "La guerre des Mousquetaires", "_value": 0}, {"_text": "la guerre de Cent Ans", "_value": 10}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -94,7 +94,7 @@
         "_label" : "Dans quelle discipline scientifique Albert Einstein a-t-il reçu un Prix Nobel ?",
         "_answers": [{"_text": "Chimie", "_value": 0}, {"_text": "Physique", "_value": 10}, {"_text": "Mathématiques", "_value": 0}, {"_text": "Astronomie", "_value": 0}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -102,7 +102,7 @@
         "_label" : "Quel animal forme le corps du Sphinx de Gizeh, en Egypte ?",
         "_answers": [{"_text": "Un Chat", "_value": 0}, {"_text": "Un Tigre", "_value": 0}, {"_text": "Un Puma", "_value": 0}, {"_text": "Un Lion", "_value": 10}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -110,7 +110,7 @@
         "_label" : "En quelle année s’est finie la Seconde Guerre Mondiale ?",
         "_answers": [{"_text": "1945", "_value": 10}, {"_text": "1944", "_value": 0}, {"_text": "1947", "_value": 0}, {"_text": "1943", "_value": 0}],
         "_picture": "",
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     }
     ],
 
@@ -124,7 +124,7 @@
         "_output": [],
         "_icon": "",
         "_popularity": 3,
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     },
         {
         "_title": "General Test about History",
@@ -135,7 +135,7 @@
         "_output": [],
         "_icon": "",
         "_popularity": 2,
-        "_owner": ""
+        "_owner": "647b6f5ba7feba7de2d55de3"
     }
     ],
 

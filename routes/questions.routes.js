@@ -8,7 +8,7 @@ import controlQuestionOwnership from '../middlewares/controlQuestionOwnership.js
 
 const router = express.Router();
 
-// PARAMS | :_id | Control of ObjectId validity
+// PARAMS | :_id | Control of the ObjectId validity
 router.param('_id', (request, response, next, _id) => {
     if (!isValidObjectId(_id)) {
         response.status(400).json({success: false, message: 'Bad Request: Invalid Question ID provided in URL.'});
@@ -21,7 +21,7 @@ router.param('_id', (request, response, next, _id) => {
 
 // ROUTES | QUESTIONS
 router.get('/', authenticate, controlRoleAdmin, getFullBankOfQuestions);
-router.post('/new', authenticate, createNewQuestion);
+router.post('/new', authenticate, addQuestion);
 router.get('/:_id', authenticate, controlQuestionOwnership, getOneQuestion);
 
 
@@ -38,7 +38,7 @@ catch (error) {console.log(error); next(error);};
 };
 
 // FUNCTION | CREATE A NEW QUESTION
-async function createNewQuestion (request, response, next) {
+async function addQuestion (request, response, next) {
 
 let _owner = request.payload._id;
 let {_tags, _level, _label, _answers, _picture} = request.body;
