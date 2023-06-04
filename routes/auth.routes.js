@@ -66,6 +66,7 @@ try {
 catch (error) {console.log(error); next(error);};
 };
 
+
 // FUNCTION | LOGIN
 async function login (request, response, next) {
 
@@ -96,11 +97,12 @@ try {
 catch (error) {console.log(error); next(error);};
 };
 
+
 // FUNCTION | VERIFY
 async function getCredentials (request, response, next) {
 try {
     console.log(`Payload _id sent with the request is ${request.payload._id}`);
-    response.status(200).json({success: true, message: request.payload, user: request.user});
+    response.status(200).json({success: true, payload: request.payload, user: request.user});
 }
 catch (error) {console.log(error); next(error);};
 };

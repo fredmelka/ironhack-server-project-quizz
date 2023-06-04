@@ -42,6 +42,7 @@ try {
 catch (error) {console.log(error); next(error);};
 };
 
+
 // FUNCTION | CREATE A NEW QUIZZ
 async function addQuizz (request, response, next) {
 
@@ -61,6 +62,7 @@ try {
 }
 catch (error) {console.log(error); next(error);};
 };
+
 
 // FUNCTION | LOAD QUIZZ TO RUN TEST
 async function loadQuizzToRun (request, response, next) {
