@@ -13,7 +13,7 @@ const router = express.Router();
 // ROUTES | AUTHENTIFICATION
 router.post('/signup', signUp);
 router.post('/login', login);
-router.get('/verify', authenticate, getVerification);
+router.get('/verify', authenticate, getCredentials);
 
 // FUNCTION | SIGNUP
 async function signUp (request, response, next) {
@@ -96,7 +96,7 @@ catch (error) {console.log(error); next(error);};
 };
 
 // FUNCTION | VERIFY
-async function getVerification (request, response, next) {
+async function getCredentials (request, response, next) {
 try {
     console.log(`Payload _id sent with the request is ${request.payload._id}`);
     response.status(200).json({success: true, message: request.payload, user: request.user});

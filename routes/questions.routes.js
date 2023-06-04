@@ -1,13 +1,27 @@
 
 import express from 'express';
+import { isValidObjectId } from 'mongoose';
 import Question from '../models/question.model.js';
 import authenticate from '../middlewares/authenticate.js';
+import controlRoleAdmin from '../middlewares/controlRoleAdmin.js';
+import controlOwner from '../middlewares/controlQuestionOwner.js';
 
 const router = express.Router();
 
+// PARAMS | :id controlled for Object validation
+router.param('_id', (request, response, next, _id) => {
+    if (!isValidObjectId(_id)) {
+        response.status(400).json({success: false, message: 'Bad Request: Invalid Question ID provided in URL.'});
+        return;};
+    request.questionId = _id;
+    next();
+});
+
+
 // ROUTES | QUESTIONS
-router.get('/', authenticate, getFullBankOfQuestions);
+router.get('/', authenticate, controlRoleAdmin, getFullBankOfQuestions);
 router.post('/new', authenticate, createNewQuestion);
+router.get('/:_id', authenticate, controlOwner, getOneQuestion);
 
 
 // FUNCTION | GET FULL BANK OF QUESTIONS
@@ -19,7 +33,7 @@ try {
 
     response.status(200).json({success: true, data: questionsBank});
 }
-catch (error) {console.log(error); next(error);}
+catch (error) {console.log(error); next(error);};
 };
 
 // FUNCTION | CREATE A NEW QUESTION
@@ -35,7 +49,17 @@ try {
     let newQuestion = await Question.create({_tags, _level, _label, _answers, _picture, _owner});
     response.status(201).json({success: true, question: newQuestion._id});
 }
-catch (error) {console.log(error); next(error);}
+catch (error) {console.log(error); next(error);};
 };
+
+// FUNCTION | GET ONE QUESTION DETAILS
+async function getOneQuestion (request, response, next) {
+try {
+    let questionDetails = await Question.findById(request.questionId);
+    response.status(200).json({success: true, data: questionDetails});
+}
+catch (error) {console.log(error); next(error);};
+};
+
 
 export default router;
