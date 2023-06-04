@@ -10,6 +10,7 @@ const tokenSecret = process.env.TOKEN_SECRET;
 
 const router = express.Router();
 
+
 // ROUTES | AUTHENTIFICATION
 router.post('/signup', signUp);
 router.post('/login', login);
