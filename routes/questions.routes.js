@@ -8,14 +8,24 @@ import controlQuestionOwnership from '../middlewares/controlQuestionOwnership.js
 
 const router = express.Router();
 
-// PARAMS | :_id | Control of the ObjectId validity
-router.param('_id', (request, response, next, _id) => {
-    if (!isValidObjectId(_id)) {
-        response.status(400).json({success: false, message: 'Bad Request: Invalid Question ID provided in URL.'});
-        return;};
-    // questionId is now added directly as a new key to object request (vs in params sub-object)
+// PARAMS | :_id | Controls of ObjectId consistency and Question existence 
+router.param('_id', async (request, response, next, _id) => {
+
+// Rejection for inconsistency MongoBD Question _id passed as parameter 
+if (!isValidObjectId(_id)) {
+    response.status(400).json({success: false, message: 'Bad Request: Invalid Question ID provided in URL.'});
+    return;};
+
+try {
+    // Rejection for inexisting Question _id
+    let isQuestionExisting = await Question.findById({_id: _id});
+    if (!isQuestionExisting) {response.status(400).json({success: false, message: 'Question ID not found.'}); return;};
+    
+    // QuestionId is now added directly to the Request Object as a new key/value pair (vs in params sub-object)
     request.questionId = _id;
     next();
+}
+catch (error) {console.log(error); next(error);};
 });
 
 

@@ -1,4 +1,5 @@
 
+// MIDDLEWARE | CONTROL WHETHER ROLE OF USER IS ADMIN OR NOT
 async function controlRoleAdmin (request, response, next) {
 try {
     if (request.user._status === 'Admin') {return next()}

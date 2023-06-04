@@ -11,6 +11,7 @@ const router = express.Router();
 router.get('/catalog', browseAllQuizz);
 router.post('/new', authenticate, addQuizz);
 
+
 // FUNCTION | BROWSE ALL QUIZZ SUMMARIES
 async function browseAllQuizz (request, response, next) {
 try {
@@ -20,6 +21,7 @@ try {
 catch (error) {console.log(error); next(error);};
 };
 
+// FUNCTION | CREATE A NEW QUIZZ
 async function addQuizz (request, response, next) {
 
 let _owner = request.payload._id;
