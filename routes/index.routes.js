@@ -1,6 +1,7 @@
 
-import express from 'express';                  // Importing module 'express' to set Router method
-import authRoutes from './auth.routes.js';      // Importing the authentification routes
+import express from 'express';
+import authRoutes from './auth.routes.js';
+import questionsRoutes from './questions.routes.js';
 
 const router = express.Router();
 
@@ -8,8 +9,9 @@ const healthCheck = (request, response, next) => {
     response.status(200).json({ success: true, message: 'Database connection up and running.'});};
 
     
-// ROUTES PREFIXING | PATHS FILES
-router.get('/', healthCheck);                   // Setting a Health Check on the server
-router.use('/auth', authRoutes);                // Setting the Authentification routes
+// ROUTES | PREFIXING + HEALTH CHECK
+router.get('/', healthCheck);                           // Setting Health Check on the server
+router.use('/auth', authRoutes);                        // Setting Authentification routes
+router.use('/questions', questionsRoutes);              // Setting Questions routes
 
 export default router;

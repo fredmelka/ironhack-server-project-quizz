@@ -1,9 +1,9 @@
 
-import express from 'express';                                      // Importing module 'express' to set Router methods
-import bcrypt from 'bcryptjs';                                      // Importing module 'bcryptjs' to deal with password encryption
-import jwt from 'jsonwebtoken';                                     // Importing module 'jsonwebtoken' to manage token exchanges and authentication
-import isAuthenticated from '../middlewares/isAuthenticated.js';    // Importing middleware 'isAuthenticated to decode token
-import User from '../models/user.model.js';                         // Importing model User to interact with database
+import express from 'express';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import authenticate from '../middlewares/authenticate.js';
+import User from '../models/user.model.js';
 
 const saltRounds = Number(process.env.SALT);
 const tokenSecret = process.env.TOKEN_SECRET;
@@ -13,11 +13,11 @@ const router = express.Router();
 // ROUTES | AUTHENTIFICATION
 router.post('/signup', signUp);
 router.post('/login', login);
-router.get('/verify', isAuthenticated, authentication);
+router.get('/verify', authenticate, getVerification);
 
 // FUNCTION | SIGNUP
 async function signUp (request, response, next) {
-    
+
 let {_username, _password, _email} = request.body;
 
 // Rejection for empty inputs
@@ -96,10 +96,10 @@ catch (error) {console.log(error); next(error);};
 };
 
 // FUNCTION | VERIFY
-async function authentication (request, response, next) {
+async function getVerification (request, response, next) {
 try {
     console.log(`Payload _id sent with the request is ${request.payload._id}`);
-    response.status(200).json({success: true, message: request.payload, user: request.user})
+    response.status(200).json({success: true, message: request.payload, user: request.user});
 }
 catch (error) {console.log(error); next(error);};
 };
