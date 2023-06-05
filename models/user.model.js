@@ -26,11 +26,12 @@ const userSchema = new Schema({
             lowercase: true,
             trim: true,
             match: EMAIL_REGEX},
-    _status: {
+    _role: {
             type: String,
+            required: true,
             enum: ['Player', 'Master', 'Admin'],
-            default: 'User'},
-    _friendlist: [String] // Needs here some clarification and specification
+            default: 'Player'},
+    _friendlist: [String]       // Needs here some clarification and specification
     },
     {timestamps: true}
 );

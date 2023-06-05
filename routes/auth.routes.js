@@ -57,8 +57,8 @@ try {
     let createdUser = await User.create({_username, _password: hashedPassword, _email});
 
     // Destructuring of the new User object to hide hashed password
-    let {_username: user, _email: email , _status: status, _id: id} = createdUser;
-    let newUser = {user, email, status, id};
+    let {_username: user, _email: email , _role: role, _id: id} = createdUser;
+    let newUser = {user, email, role, id};
     
     // Send success response
     response.status(201).json({success: true, user: newUser});
