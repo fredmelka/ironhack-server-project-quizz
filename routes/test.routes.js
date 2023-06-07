@@ -19,7 +19,7 @@ let {_id, _username} = request.user;
 let {_quizz} = request.body;
 
 // Rejection for Minimum Data Inconsistency
-if (!_quizz) {response.status(400).json({success: false, message: 'Bad Request: Require a valid Quizz ID.'}); return;};
+if (!_quizz) {response.status(400).json({success: false, message: 'Require a valid Quizz ID.'}); return;};
 
 try {
     let startTest = await Test.create({_player: _id, _quizz: _quizz});
@@ -38,11 +38,11 @@ let {_username} = request.user;
 let {quizz: _id, score: _score} = request.query;
 
 // Rejection for Minimum Data Inconsistency
-if (!_id) {response.status(400).json({success: false, message: 'Bad Request: Missing Test ID, unable to record score.'}); return;};
+if (!_id) {response.status(400).json({success: false, message: 'Missing Test ID, unable to record score.'}); return;};
 
 // Rejection for inconsistency MongoBD Test _id passed in the body of the request 
 if (!isValidObjectId(_id)) {
-    response.status(400).json({success: false, message: 'Bad Request: Invalid Quizz ID provided in URL.'});
+    response.status(400).json({success: false, message: 'Invalid Quizz ID provided in URL.'});
     return;};
 
 try {

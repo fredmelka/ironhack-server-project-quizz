@@ -74,7 +74,7 @@ let { _email, _password } = request.body;
 
 // Rejection for empty inputs
 if (_email == '' || _password == '') {
-    response.status(400).json({success: false, message: 'Bad Request: Please provide non empty inputs.'});
+    response.status(400).json({success: false, message: 'Please provide non empty inputs.'});
     return;};
 
 try {
