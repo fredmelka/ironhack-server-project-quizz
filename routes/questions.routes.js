@@ -33,6 +33,7 @@ catch (error) {console.log(error); next(error);};
 router.get('/', authenticate, controlRoleAdmin, getFullBankOfQuestions);
 router.post('/new', authenticate, addQuestion);
 router.get('/:_id', authenticate, controlQuestionOwnership, getOneQuestion);
+router.delete('/:_id/delete', authenticate, controlQuestionOwnership, deleteOneQuestion);
 
 
 // FUNCTION | GET FULL BANK OF QUESTIONS
@@ -70,6 +71,16 @@ async function getOneQuestion (request, response, next) {
 try {
     let questionDetails = await Question.findById(request.questionId);
     response.status(200).json({success: true, data: questionDetails});
+}
+catch (error) {console.log(error); next(error);};
+};
+
+
+// FUNCTION | DELETE ONE QUESTION
+async function deleteOneQuestion (request, response, next) {
+try {
+    let questionToDelete = await Question.findByIdAndDelete(request.questionId);
+    response.status(200).json({success: true, message: questionToDelete._id});
 }
 catch (error) {console.log(error); next(error);};
 };
