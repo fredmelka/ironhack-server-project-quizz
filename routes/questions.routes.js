@@ -38,7 +38,7 @@ router.get('/:_id', authenticate, controlQuestionOwnership, getOneQuestion);
 // FUNCTION | GET FULL BANK OF QUESTIONS
 async function getFullBankOfQuestions (request, response, next) {
 try {
-    let questionsBank = await Question.find({}, {});
+    let questionsBank = await Question.find({}, {}).select('-_id -_answers._id -_answers.createdAt -_answers.updatedAt');
     // TO KEEP ALL FIELDS BUT: .select('-_id -_answers._id -_answers.createdAt -_answers.updatedAt')
     // TO PROJECT NORMALLY: find{query},{project})
 
@@ -52,14 +52,14 @@ catch (error) {console.log(error); next(error);};
 async function addQuestion (request, response, next) {
 
 let _owner = request.payload._id;
-let {_tags, _level, _label, _answers, _picture} = request.body;
+let {_tags, _level, _language, _label, _answers, _picture} = request.body;
 
 // Rejection for Minimum Data Inconsistency
 if (!_label || _answers.length === 0) {response.status(400).json({success: false, message: 'Bad Request: Insufficient data.'}); return;};
 
 try {
-    let newQuestion = await Question.create({_tags, _level, _label, _answers, _picture, _owner});
-    response.status(201).json({success: true, question: newQuestion._id});
+    let newQuestion = await Question.create({_tags, _level, _language, _label, _answers, _picture, _owner});
+    response.status(201).json({success: true, message: newQuestion._id});
 }
 catch (error) {console.log(error); next(error);};
 };

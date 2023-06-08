@@ -18,7 +18,7 @@ const questionSchema = new Schema({
     _tags: [        // Here it is an array of strings !!
             {type: String,
             match: NON_EMPTY_STRING_REGEX,
-            uppercase: true}
+            lowercase: true}
             ],
     _level: {
             type: String,
@@ -36,7 +36,7 @@ const questionSchema = new Schema({
             set: capitalize},
     _answers: [     // Here it is an array of subdocuments !!
             {type: answerSchema, 
-            default: {}, // OR Try this syntax to match Mongoose's documentation about passing default as turnaround: 'default: () => ({})'
+            default: () => ({}), // OR Try this syntax to match Mongoose's documentation about passing default as turnaround: 'default: () => ({})'
             select: false}
             ],
     _picture: {
