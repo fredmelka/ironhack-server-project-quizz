@@ -32,7 +32,8 @@ catch (error) {console.log(error); next(error);};
 // ROUTES | QUESTIONS
 router.get('/', authenticate, controlRoleAdmin, getFullBankOfQuestions);
 router.post('/new', authenticate, addQuestion);
-router.get('/:_id', authenticate, controlQuestionOwnership, getOneQuestion);
+router.get('/:_id/edit', authenticate, controlQuestionOwnership, getOneQuestion);
+router.patch('/:_id/update', authenticate, controlQuestionOwnership, updateOneQuestion);
 router.delete('/:_id/delete', authenticate, controlQuestionOwnership, deleteOneQuestion);
 
 
@@ -71,6 +72,21 @@ async function getOneQuestion (request, response, next) {
 try {
     let questionDetails = await Question.findById(request.questionId);
     response.status(200).json({success: true, data: questionDetails});
+}
+catch (error) {console.log(error); next(error);};
+};
+
+
+// FUNCTION | UPDATE ONE QUESTION
+async function updateOneQuestion (request, response, next) {
+
+let {_tags, _level, _language, _label, _answers, _picture} = request.body;
+try {
+    let updatedQuestion = await Question.findByIdAndUpdate(
+            request.questionId,
+            {_tags, _level, _language, _label, _answers, _picture},
+            {new: true});
+    response.status(200).json({success: true, data: updatedQuestion});
 }
 catch (error) {console.log(error); next(error);};
 };
