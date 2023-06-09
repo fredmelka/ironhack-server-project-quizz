@@ -10,21 +10,17 @@ import Test from '../models/test.model.js';
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/skweez';
 
-const user = data.user;
-const question_1 = data.question_1;
-const question_2 = data.question_2;
-const question_3 = data.question_3;
-const quizz = data.quizz;
-const test = data.test;
+
+const questions = data.questions;
 
 mongoose
     .connect(MONGODB_URI)
     .then(async (x) => {
         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
-        return await User.deleteMany();
+        return await Question.deleteMany();
         })
     .then(async () => {
-        try {await User.create(user);}
+        try {await Question.create(questions);}
         catch (error) {console.log(error)};
     })
     .catch((error) => {console.log('Error while trying to connect to database');})

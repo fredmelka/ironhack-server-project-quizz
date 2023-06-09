@@ -1,20 +1,12 @@
 {
-    "user": {
-        "_username": "EvaMelka",
-        "_password": "Skweez@123",
-        "_email": "eva@skweez.com",
-        "_role": "Master",
-        "_friendlist": []
-    },
-
-    "questions": [
+    "questions" : [
         {
         "_tags": ["Maths", "Elementary", "Fun"],
         "_level": "Easy",
         "_label": "3 x 8 = ?",
         "_answers": [{"_text": "16", "_value": 0}, {"_text": "21", "_value": 0}, {"_text": "24", "_value": 1}, {"_text": "30", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags": ["Maths", "Elementary", "Fun"],
@@ -22,7 +14,7 @@
         "_label": "2 ^ 6 = ?",
         "_answers": [{"_text": "16", "_value": 0}, {"_text": "64", "_value": 1}, {"_text": "1024", "_value": 0}, {"_text": "12", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"   
+        "_owner": "6481fb7a458d5b6c664ec3bc"   
     },
         {
         "_tags": ["Maths", "Elementary", "Fun"],
@@ -30,7 +22,7 @@
         "_label": "cos(90deg) = ?",
         "_answers": [{"_text": "45", "_value": 0}, {"_text": "1", "_value": 0}, {"_text": "270", "_value": 0}, {"_text": "0", "_value": 1}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"   
+        "_owner": "6481fb7a458d5b6c664ec3bc"   
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -38,7 +30,7 @@
         "_label" : "De quelle statue peut-on admirer à côté des pyramides de Gizeh en Egypte ?",
         "_answers" : [{"_text" : "Ramsès", "_value" : 0}, {"_text" : "Ra", "_value" : 0}, {"_text" : "Ratatouille", "_value" : 0}, {"_text" : "Sphinx", "_value" : 10}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -46,7 +38,7 @@
         "_label" : "Lequel de ces dinosaures n'était pas herbivore ?",
         "_answers" : [{"_text": "le Giganotosaure", "_value": 10}, {"_text": "le Stégosaure", "_value": 0}, {"_text": "le Dreugstaure", "_value": 0}, {"_text": "le Tricératops", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -54,7 +46,7 @@
         "_label" : "Sous quel règne le château de Windsor a-t-il été érigé ?",
         "_answers": [{"_text": "Henry VIII", "_value": 0}, {"_text": "Guillaume le conquérant", "_value": 10}, {"_text": "La reine Victoria", "_value": 0}, {"_text": "George III", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -62,7 +54,7 @@
         "_label" : "Quel âge est le plus proche de notre ère ?",
         "_answers": [{"_text": "L'âge de Bronze", "_value": 0}, {"_text": "L'âge de Fer", "_value": 10}, {"_text": "L'âge de Bois", "_value": 0}, {"_text": "L'âge de Pierre", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -70,7 +62,7 @@
         "_label" : "Dans quel pays est né le compositeur Frédéric Chopin ?",
         "_answers": [{"_text": "Allemagne", "_value": 0}, {"_text": "Hongrie", "_value": 0}, {"_text": "Pologne", "_value": 10}, {"_text": "France", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -78,7 +70,7 @@
         "_label" : "Qu'est-ce qui orne le blason de la ville de Paris ?",
         "_answers": [{"_text": "Un Bonnet Phrygien", "_value": 0}, {"_text": "Un Coq", "_value": 0}, {"_text": "Un Navire", "_value": 10}, {"_text": "Une Colombe", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -86,7 +78,7 @@
         "_label" : "Quel nom porte la guerre qui a opposé la France et l'Angleterre entre 1337 et 1453 ?",
         "_answers": [{"_text": "La Guerre des Boutons", "_value": 0}, {"_text": "La Drôle de Guerre", "_value": 0}, {"_text": "La guerre des Mousquetaires", "_value": 0}, {"_text": "la guerre de Cent Ans", "_value": 10}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -94,7 +86,7 @@
         "_label" : "Dans quelle discipline scientifique Albert Einstein a-t-il reçu un Prix Nobel ?",
         "_answers": [{"_text": "Chimie", "_value": 0}, {"_text": "Physique", "_value": 10}, {"_text": "Mathématiques", "_value": 0}, {"_text": "Astronomie", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -102,7 +94,7 @@
         "_label" : "Quel animal forme le corps du Sphinx de Gizeh, en Egypte ?",
         "_answers": [{"_text": "Un Chat", "_value": 0}, {"_text": "Un Tigre", "_value": 0}, {"_text": "Un Puma", "_value": 0}, {"_text": "Un Lion", "_value": 10}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_tags" : ["History", "Elementary"],
@@ -110,9 +102,160 @@
         "_label" : "En quelle année s’est finie la Seconde Guerre Mondiale ?",
         "_answers": [{"_text": "1945", "_value": 10}, {"_text": "1944", "_value": 0}, {"_text": "1947", "_value": 0}, {"_text": "1943", "_value": 0}],
         "_picture": "",
-        "_owner": "647b6f5ba7feba7de2d55de3"
-    }
-    ],
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "France"],
+        "_level" : "Intermediate",
+        "_label" : "Quel président français est à l'origine de la construction de la Pyramide du Louvre ?",
+        "_answers": [{"_text": "Jacques Chirac", "_value": 0}, {"_text": "Geroges Pompidou", "_value": 0}, {"_text": "Charles de Gaulle", "_value": 0}, {"_text": "François Mitterand", "_value": 10}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Cinema"],
+        "_level" : "Intermediate",
+        "_label" : "Qui a réalisé le film intitulé 'Né un 4 Juillet' ?",
+        "_answers": [{"_text": "David Lynch", "_value": 0}, {"_text": "Robert Altman", "_value": 0}, {"_text": "Oliver Stone", "_value": 10}, {"_text": "Jerry Bruckheimer", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Musique"],
+        "_level" : "Intermediate",
+        "_label" : "A quelle période musicale appartenait Claudio Monteverdi ?",
+        "_answers": [{"_text": "Classique", "_value": 0}, {"_text": "Romantique", "_value": 0}, {"_text": "Baroque", "_value": 10}, {"_text": "Contemporain", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Cinema", "USA"],
+        "_level" : "Intermediate",
+        "_label" : "En quelle année a eu lieu la première cérémonie des Oscars ?",
+        "_answers": [{"_text": "1919", "_value": 0}, {"_text": "1929", "_value": 10}, {"_text": "1947", "_value": 0}, {"_text": "1965", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Opéra"],
+        "_level" : "Intermediate",
+        "_label" : "Qui a composé l'Opéra Madame Butterfly ?",
+        "_answers": [{"_text": "Puccini", "_value": 10}, {"_text": "Vivaldi", "_value": 0}, {"_text": "Verdi", "_value": 0}, {"_text": "Bellini", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Théatre"],
+        "_level" : "Intermediate",
+        "_label" : "De qui est amoureux Rodrigue dans Le Cid ?",
+        "_answers": [{"_text": "Berenice", "_value": 0}, {"_text": "Andromaque", "_value": 0}, {"_text": "Elvire", "_value": 0}, {"_text": "Chimène", "_value": 10}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Livres"],
+        "_level" : "Intermediate",
+        "_label" : "Pour quel livre Pierre Lemaitre a-t-il reçu le prix Goncourt en 2013 ?",
+        "_answers": [{"_text": "Au-revoir là-haut", "_value": 10}, {"_text": "Le Grand Monde", "_value": 0}, {"_text": "Anomalie", "_value": 0}, {"_text": "Chanson Douce", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Cinema"],
+        "_level" : "Intermediate",
+        "_label" : "Quel acteur américain incarne Spider-Man ?",
+        "_answers": [{"_text": "Ben Affleck", "_value": 0}, {"_text": "Christian Bale", "_value": 0}, {"_text": "Eric Bana", "_value": 0}, {"_text": "Tobey Maguire", "_value": 10}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Peinture"],
+        "_level" : "Intermediate",
+        "_label" : "A quel peintre doit-on la « Naissance de Vénus ?",
+        "_answers": [{"_text": "Michel-Ange", "_value": 0}, {"_text": "Botticelli", "_value": 10}, {"_text": "Dali", "_value": 0}, {"_text": "Velasquez", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Arts", "Livres"],
+        "_level" : "Intermediate",
+        "_label" : "Durant quel siècle est née la Commedia Del'Arte ?",
+        "_answers": [{"_text": "15ème siecle", "_value": 0}, {"_text": "16ème siecle", "_value": 10}, {"_text": "17ème siecle", "_value": 0}, {"_text": "18ème siecle", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Sports", "Asie", "Language"],
+        "_level" : "Intermediate",
+        "_label" : "Que signifie 'Karaté' en japonais ?",
+        "_answers": [{"_text": "Crie qui tue", "_value": 0}, {"_text": "Voie de souplesse", "_value": 0}, {"_text": "Attaque foudroyante", "_value": 0}, {"_text": "Main vide", "_value": 10}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Sports", "Golf"],
+        "_level" : "Easy",
+        "_label" : "Combien de trous y a-t-il sur un parcours officiel de golf ?",
+        "_answers": [{"_text": "16", "_value": 0}, {"_text": "18", "_value": 10}, {"_text": "21", "_value": 0}, {"_text": "9", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Sports", "Cyclisme", "France"],
+        "_level" : "Easy",
+        "_label" : "De quelle couleur est le maillot du leader pendant le Tour de France ?",
+        "_answers": [{"_text": "Jaune", "_value": 10}, {"_text": "Vert", "_value": 0}, {"_text": "A pois", "_value": 0}, {"_text": "Rouge", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Sports", "Cinema", "People"],
+        "_level" : "Hard",
+        "_label" : "Lequel de ces sports était pratiqué par Agatha Christie ?",
+        "_answers": [{"_text": "Surf", "_value": 10}, {"_text": "Escalade", "_value": 0}, {"_text": "Triathlon", "_value": 0}, {"_text": "Lancer de javelots", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Sports", "Jeux", "Disciplines"],
+        "_level" : "Hard",
+        "_label" : "Entre 1896 et 2020, le nombre d’épreuves olympiques est passé de 43 à ?",
+        "_answers": [{"_text": "85", "_value": 0}, {"_text": "225", "_value": 0}, {"_text": "320", "_value": 10}, {"_text": "480", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Sports", "Jeux", "Disciplines"],
+        "_level" : "Intermediate",
+        "_label" : "Quel pays ne participe pas au tournoi des Six Nations ?",
+        "_answers": [{"_text": "Italie", "_value": 0}, {"_text": "Pays de Galles", "_value": 0}, {"_text": "Espagne", "_value": 10}, {"_text": "Ecosse", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Sports", "Jeux", "Disciplines"],
+        "_level" : "Easy",
+        "_label" : "Contre quel pays a gagné l’Allemagne lors de la finale de la Coupe du Monde de Foot en 2014 ?",
+        "_answers": [{"_text": "France", "_value": 0}, {"_text": "Argentine", "_value": 10}, {"_text": "Croatie", "_value": 0}, {"_text": "Italie", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+        {
+        "_tags" : ["Sports", "Jeux", "Disciplines"],
+        "_level" : "Easy",
+        "_label" : "Où se sont déroulés les Jeux Olympiques d’été de 2004 ?",
+        "_answers": [{"_text": "Athènes", "_value": 10}, {"_text": "Pékin", "_value": 0}, {"_text": "Sydney", "_value": 0}, {"_text": "Londres", "_value": 0}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    },
+    {
+        "_tags" : ["Sports", "Golf", "Sciences"],
+        "_level" : "Easy",
+        "_label" : "A quoi servent les alvéoles sur les balles de golf ?",
+        "_answers": [{"_text": "Maniabilité", "_value": 0}, {"_text": "Flottaison", "_value": 0}, {"_text": "Stabilité sur l'herbe", "_value": 0}, {"_text": "Réduction de l'air", "_value": 10}],
+        "_picture": "",
+        "_owner": "6481fb7a458d5b6c664ec3bc"
+    }],
 
     "quizz": [
         {
@@ -124,7 +267,7 @@
         "_output": [],
         "_icon": "",
         "_popularity": 3,
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     },
         {
         "_title": "General Test about History",
@@ -135,7 +278,7 @@
         "_output": [],
         "_icon": "",
         "_popularity": 2,
-        "_owner": "647b6f5ba7feba7de2d55de3"
+        "_owner": "6481fb7a458d5b6c664ec3bc"
     }
     ],
 
